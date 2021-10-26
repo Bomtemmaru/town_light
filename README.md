@@ -15,12 +15,12 @@
 | Column                | Type       | Options                         |
 | ------------------    | ------     | -----------                     |
 | place                 | string     | null: false                     |
-| text                  | string     | null: false                     |
+| text                  | string     |                                 |
 | genre_id              | int        | null: false                     |
 | with_id               | int        | null: false                     |
 | how_id                | int        | null: false                     |
 | way                   | string     |                                 |
-| image                 | string     |                                 |
+| image                 | string     | null: false                     |
 | user                  | references | null: false, foreign_key: true  |
 
 - belongs_to :user
