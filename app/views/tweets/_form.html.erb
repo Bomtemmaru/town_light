@@ -1,9 +1,33 @@
 <%= form_with(model: tweet, local: true) do |form| %>
-  <%= form.text_field :image, placeholder: "Image Url" %>
-  <%= form.text_area :text, placeholder: "text", rows: "10" %>
-  <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-  <%= form.collection_select(:with_id, With.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-  <%= form.collection_select(:how_id, How.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-  <%= form.text_area :way, placeholder: "through route", rows: "10" %>
-  <%= form.submit "SEND" %>
+<div class="form">
+  <div class="weight-bold-text">
+  Name
+    <%= form.text_field :place, placeholder: "Name" %>
+  </div>
+  <div class="weight-bold-text">
+  Image
+    <%= form.text_field :image, placeholder: "Image Url" %>
+  </div>
+  <div class="weight-bold-text">
+  Detail
+    <%= form.text_field :text, placeholder: "text", rows: "10" %>
+  </div>
+  <div class="weight-bold-text">  
+  Genre
+    <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"tweet-genre"}) %>
+  </div>
+  <div class="weight-bold-text">  
+  With
+    <%= form.collection_select(:with_id, With.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  </div>
+  <div class="weight-bold-text"> 
+  Transportation
+    <%= form.collection_select(:how_id, How.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+  </div>
+  <div class="weight-bold-text">  
+  Way
+    <%= form.text_field :way, placeholder: "through route", rows: "10" %>
+  </div>
+    <%= form.submit "SEND" %>
+</div>
 <% end %>

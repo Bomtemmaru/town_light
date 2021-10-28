@@ -65,6 +65,8 @@ html {
  * Remove default margin. */
 body {
   margin: 0;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
 }
 
 /* ==========================================================================
@@ -74,6 +76,10 @@ body {
  * Remove the gray background color from active links in IE 10. */
 a {
   background: transparent;
+}
+
+.copyright {
+  font-family: 'Homemade Apple', cursive;
 }
 
 /*
@@ -360,6 +366,12 @@ object,
 embed {
   max-width: 100%;
   height: auto;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 5px;
 }
 
 object,
@@ -738,13 +750,14 @@ header.header div.header__bar.row div.grid-6 a.post:hover {
 header.header {
   padding: 10px;
   border-bottom: 1px solid #D8D8D8;
-  background-color: #fff;
+  background-color: #000099;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 5;
   height: 62px;
+  opacity: 0.65;
 }
 
 header.header div.header__bar.row {
@@ -759,6 +772,8 @@ header.header div.header__bar.row h1.grid-6 {
 
 header.header div.header__bar.row h1.grid-6 a {
   display: block;
+  font-family: 'Permanent Marker', cursive;
+  color: white;
 }
 
 header.header div.header__bar.row div.grid-6 {
